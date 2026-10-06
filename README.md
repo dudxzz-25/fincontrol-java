@@ -1,17 +1,75 @@
 # FinControl Java
 
-Sistema bancário de terminal escrito em **Java**, aplicando orientação a objetos, encapsulamento, herança, polimorfismo, exceções e persistência em CSV.
+[![Build](https://github.com/dudxzz-25/fincontrol-java/actions/workflows/ci.yml/badge.svg)](https://github.com/dudxzz-25/fincontrol-java/actions/workflows/ci.yml)
 
-## Compilar e executar
-Linux/macOS:
+Sistema bancário de terminal desenvolvido em **Java**, criado para aplicar conceitos de Programação Orientada a Objetos e persistência simples em CSV.
+
+## ✨ Funcionalidades
+
+- criação de contas;
+- depósito;
+- saque;
+- transferência entre contas;
+- listagem de contas;
+- persistência automática em `data/accounts.csv`;
+- diferenciação entre conta corrente e poupança.
+
+## 🛠️ Conceitos aplicados
+
+**Java · POO · Encapsulamento · Herança · Polimorfismo · Exceções · Persistência em CSV**
+
+## 🧩 Estrutura
+
+```text
+fincontrol-java/
+├── data/
+│   └── accounts.csv
+├── src/com/eduardo/fincontrol/
+│   ├── Account.java
+│   ├── Bank.java
+│   ├── CheckingAccount.java
+│   ├── CsvRepository.java
+│   ├── Main.java
+│   └── SavingsAccount.java
+├── sql/
+│   └── schema.sql
+├── build.sh
+└── README.md
+```
+
+O arquivo `sql/schema.sql` apresenta uma modelagem relacional equivalente para uma futura migração da persistência CSV para banco de dados.
+
+## ▶️ Compilar e executar
+
+### Linux/macOS
+
 ```bash
 ./build.sh
 java -cp out com.eduardo.fincontrol.Main
 ```
-Windows (PowerShell):
+
+### Windows PowerShell
+
 ```powershell
 javac -d out src/com/eduardo/fincontrol/*.java
 java -cp out com.eduardo.fincontrol.Main
 ```
 
-Os dados são persistidos em `data/accounts.csv`. `sql/schema.sql` apresenta uma modelagem relacional equivalente para evolução futura.
+## 🧠 O que este projeto demonstra
+
+- modelagem orientada a objetos;
+- separação entre domínio e persistência;
+- manipulação de arquivos;
+- tratamento de erros;
+- fluxo de operações bancárias por CLI;
+- organização de código Java em pacotes.
+
+## ⚠️ Limitações
+
+O projeto utiliza CSV para manter a execução simples e educacional. Não há autenticação, concorrência, banco transacional ou tratamento financeiro com `BigDecimal`, itens que seriam importantes em um sistema real.
+
+---
+
+Desenvolvido por **Eduardo de Toledo Dias**.
+
+[Portfólio](https://dudxzz-25.github.io/portfolio-web/) · [GitHub](https://github.com/dudxzz-25) · [LinkedIn](https://www.linkedin.com/in/eduardo-de-toledo-dias-880b9834b/)
