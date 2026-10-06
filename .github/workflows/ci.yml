@@ -5,7 +5,7 @@ on:
   pull_request:
 
 jobs:
-  build:
+  build-and-smoke-test:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -15,3 +15,10 @@ jobs:
           java-version: "21"
       - name: Compile
         run: bash build.sh
+      - name: Run CLI smoke test
+        run: |
+          cp data/accounts.csv /tmp/accounts.csv
+          printf "1\n999\nCI User\nC\n2\n999\n150\n5\n0\n" | java -cp out com.eduardo.fincontrol.Main > /tmp/fincontrol.out
+          grep -q "CI User" /tmp/fincontrol.out
+          grep -q "saldo R\$ 150.00" /tmp/fincontrol.out
+          mv /tmp/accounts.csv data/accounts.csv
