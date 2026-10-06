@@ -1,5 +1,13 @@
 # FinControl Java
 
+<p align="center">
+  <img alt="Java" src="https://img.shields.io/badge/Java-OOP-ED8B00?logo=openjdk&logoColor=white">
+  <img alt="CSV" src="https://img.shields.io/badge/CSV-Persistence-217346">
+  <img alt="CLI" src="https://img.shields.io/badge/CLI-Banking-555555">
+  <a href="https://github.com/dudxzz-25/fincontrol-java/actions/workflows/ci.yml"><img alt="Build" src="https://github.com/dudxzz-25/fincontrol-java/actions/workflows/ci.yml/badge.svg"></a>
+</p>
+
+
 [![Build](https://github.com/dudxzz-25/fincontrol-java/actions/workflows/ci.yml/badge.svg)](https://github.com/dudxzz-25/fincontrol-java/actions/workflows/ci.yml)
 
 Sistema bancário de terminal desenvolvido em **Java**, criado para aplicar conceitos de Programação Orientada a Objetos e persistência simples em CSV.
